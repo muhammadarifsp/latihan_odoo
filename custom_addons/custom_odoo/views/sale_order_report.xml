@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_saleorder_inherit" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//div[@id='informations']" position="after">
+            <h2>Tambahan Custom</h2>
+            <span t-if="doc.customer_notes">
+                <strong>Customer Notes : </strong>
+                <p>
+                    <t t-esc="doc.customer_notes" />
+                </p>
+            </span>
+
+        </xpath>
+    </template>
+</odoo>
